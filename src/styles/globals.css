@@ -3,22 +3,22 @@
 
 html,
 body {
-  background: #eeeaea;
+  background: #0b1812;
   height: auto;
   min-height: 100%;
 }
 
 @layer components {
   .heading {
-    @apply font-mono;
+    @apply font-sans;
   }
 
   .title {
-    @apply font-mono uppercase leading-tight;
+    @apply font-sans leading-tight;
   }
 
   .body {
-    @apply font-sans leading-relaxed;
+    @apply font-mono leading-relaxed;
   }
 }
 
@@ -26,24 +26,24 @@ figure {
   --c: 34px;
   --p: 20px;
   --d: 7px;
-  background: red;
-  display: inline-block;
+
+  aspect-ratio: 3 / 4;
+  width: 100%;
+
   padding: var(--p);
+  display: block;
+
   background:
     radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
-    radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% /
-      var(--c) var(--c),
-    linear-gradient(#fff 0 0) 50% 50% / calc(100% - var(--p))
-      calc(100% - var(--p)),
-    linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p))
-      calc(100% - var(--d)),
-    linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% /
-      calc(100% - var(--d)) calc(100% - var(--p)),
-    radial-gradient(farthest-side at 0 100%, #00000018, #0000)
-      calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
-    radial-gradient(farthest-side at 100% 0, #00000018, #0000)
-      calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d);
+    radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
+    linear-gradient(#fff 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
+    linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
+    linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
+    radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
+    radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d);
+
   background-repeat: no-repeat;
+
   clip-path: polygon(
     0 var(--c),
     var(--c) 0,
@@ -52,4 +52,12 @@ figure {
     calc(100% - var(--c)) 100%,
     0 100%
   );
+
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

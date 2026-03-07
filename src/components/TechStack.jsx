@@ -36,18 +36,6 @@ export default function TechStack() {
           ))}
         </motion.div>
       </div>
-
-      {/* Backend Row */}
-      <div className="flex justify-center shadow-[0_0_20px_rgba(0,0,0,0.25)] mt-2 overflow-hidden -rotate-1">
-        <motion.div
-          style={{ x: x2 }}
-          className="gap-4 md:gap-10 inline-flex bg-linear-to-r from-neutral-200 to-neutral-300 py-3"
-        >
-          {[...SKILLS.BackEnd, ...SKILLS.BackEnd].map((skill, i) => (
-            <Tech skill={skill} key={`${skill.tag}-${i}`} />
-          ))}
-        </motion.div>
-      </div>
     </div>
   );
 }

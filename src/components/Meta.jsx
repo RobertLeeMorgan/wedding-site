@@ -3,41 +3,36 @@ import Head from "next/head";
 export default function Meta() {
   return (
     <Head>
-      <title>Robert Morgan | Web Developer & Designer</title>
+      <title>Mitzie & Rob | 10 March 2026 Wedding</title>
+
       <meta
         name="description"
-        content="Full-stack web developer and designer, blending animation and art with interactive, reliable, and maintainable web apps."
+        content="Join us to celebrate the wedding of Mitzie & Rob. Find the date, venue, agenda, RSVP details, and live stream link."
       />
-      <meta name="robots" content="index, follow" />
 
-      {/* Open Graph for social sharing */}
-      <meta
-        property="og:title"
-        content="Full-stack web developer and designer, blending animation and art with interactive, reliable, and maintainable web apps."
-      />
+      <meta name="robots" content="noindex, nofollow" />
+
+      {/* Open Graph (WhatsApp / Messenger / Facebook preview) */}
+      <meta property="og:title" content="Mitzie & Rob Wedding" />
       <meta
         property="og:description"
-        content="I build reliable and intuitive web apps."
+        content="Join us to celebrate the wedding of Mitzie & Rob. Find the date, venue, agenda, RSVP details, and live stream link."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.robertmorgan.dev/" />
-      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:url" content="https://mitzieandrob.vercel.app/" />
+      <meta property="og:image" content="/og-image.jpg" />
 
-      {/* Twitter Card */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content="Full-stack web developer and designer, blending animation and art with interactive, reliable, and maintainable web apps."
-      />
+      <meta name="twitter:title" content="Mitzie & Rob Wedding" />
       <meta
         name="twitter:description"
-        content="I build reliable and intuitive web apps."
+        content="Join us to celebrate the wedding of Mitzie & Rob. Find the date, venue, agenda, RSVP details, and live stream link."
       />
-      <meta name="twitter:image" content="/og-image.png" />
+      <meta name="twitter:image" content="/og-image.jpg" />
 
-      {/* Favicon */}
       <link rel="icon" href="/icon.png" />
-      <link rel="canonical" href="https://www.robertmorgan.dev/" />
+      <link rel="canonical" href="https://mitzieandrob.vercel.app/" />
     </Head>
   );
 }

@@ -1,88 +1,70 @@
-import Button from "@/components/Button";
-import Nav from "@/components/Nav";
-import AnimatedTitle from "@/components/AnimatedTitle";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import Divider from "@/components/Divider";
+import { motion } from "framer-motion";
 
-export default function HeroSection() {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.32], [1, 0.93]);
-  const opacity = useTransform(scrollYProgress, [0, 0.32], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.32], [0, 100]);
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: 10,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        delay: 0.4,
-        ease: "easeOut",
-      },
-    },
-  };
-
+export default function HeroSection({ container, item }) {
   return (
-    <section className="relative h-[200svh] grid w-full mx-auto" id="home" ref={ref}>
-      <Nav variants={variants} />
-      {/* Main content */}
-      <motion.div
-        style={{ opacity, y, scale }}
-        className="sticky top-0 h-svh grid lg:space-y-0 space-y-6 place-content-center lg:place-content-evenly px-6"
-      >
-        <div className="flex flex-wrap md:flex-nowrap sm:gap-[3vw] font-bold text-stone-900 tracking-tight text-start md:text-center heading pt-10 md:pt-0 md:text-[clamp(5rem,12cqw,20rem)] text-[clamp(4.5rem,18vw,8rem)] leading-none uppercase">
-          <AnimatedTitle
-            name="Robert"
-            className="-ml-[0.05em]"
-            delay={0}
-            as="h1"
-          />
-          <AnimatedTitle
-            name="Morgan"
-            className="-ml-[0.05em] md:-mr-[0.05em]"
-            delay={0.2}
-          />
-        </div>
-
-        <motion.div
-          className="self-start text-start sm:text-center sm:text-start"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
+    <motion.section
+      id="home"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="
+        w-full
+        overflow-hidden
+        max-w-3xl
+        mx-auto
+        text-center
+        pt-20
+        space-y-18
+      "
+    >
+      <motion.div variants={item} className="relative z-10">
+        <Divider header/>
+        <h1
+          className="
+            text-[clamp(3rem,6vw,4rem)]
+            title
+            tracking-widest
+            text-[#3b342c]
+            font-light
+          "
+          style={{
+            textShadow:
+              "0 1px 0 rgba(255,255,255,0.55), 0 -1px 0 rgba(0,0,0,0.1)",
+          }}
         >
-          <p className="text-xl body sm:text-2xl md:text-3xl max-w-xl mb-6 md:mb-10 text-stone-600">
-            Full-stack developer building reliable, maintainable systems from
-            architecture to production.
-          </p>
-
-          <div className="space-x-2 sm:space-x-4 text-left">
-            <Button
-              name="View Work"
-              className="bg-stone-900 hover:bg-stone-200 text-stone-200 hover:text-stone-900 hover:border hover:border-stone-900 "
-              hero
-              link="#work"
-              scroll
-            />
-            <Button
-              name="Resume"
-              className="text-stone-900 hover:text-stone-200 border border-stone-900 hover:bg-stone-900"
-              hero
-              link="/Robert_Morgan_Resume.pdf"
-              target="_blank"
-            />
-          </div>
-        </motion.div>
+          Mitzie & Rob
+        </h1>
       </motion.div>
-    </section>
+
+      <motion.div
+        variants={item}
+        className="relative z-10 w-full max-w-2xl h-[220px] mx-auto"
+      >
+        <div className="absolute inset-0 border-2 border-[#ece2d2] pointer-events-none" />
+        <div className="absolute inset-[5px] border border-[#f7f3ea] pointer-events-none" />
+
+        <img
+          src="/photos/georgia.jpeg"
+          alt="Mitzie and Rob"
+          className="w-full h-full object-cover object-[center_40%] grayscale"
+        />
+      </motion.div>
+
+      <motion.div
+        variants={item}
+        className="
+          relative z-10
+          text-[#6a6157]
+          text-lg
+          uppercase
+          tracking-[0.18em]
+          space-y-2
+        "
+      >
+        <p>March 10, 2026</p>
+        <p>Wondellea, Silang, Cavite</p>
+      </motion.div>
+    </motion.section>
   );
 }

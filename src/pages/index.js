@@ -1,29 +1,16 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { useEffect } from "react";
 import HeroSection from "@/sections/HeroSection";
-import ContactSection from "@/sections/ContactSection";
+import RSVPSection from "@/sections/RSVPSection";
 import Meta from "@/components/Meta";
 import Lenis from "lenis";
-import MainCard from "@/components/MainCard";
-
-export const sans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-export const mono = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
+import AgendaSection from "@/sections/AgendaSection";
+import StreamSection from "@/sections/StreamSection";
+import Container from "@/components/Container";
+import Divider from "@/components/Divider";
 
 export default function Home() {
-  const scrollContainerRef = useRef(null);
-
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
@@ -43,20 +30,43 @@ export default function Home() {
     return () => lenis.destroy();
   }, []);
 
+  const container = {
+    hidden: { opacity: 0, y: 8 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 12 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <Meta />
-
-      <div
-        className={`${sans.variable} ${mono.variable} relative`}
-        id="scroll-container"
-      >
-        <HeroSection />
-
-        <MainCard />
-
-        <ContactSection />
-      </div>
+      <Container>
+        <HeroSection container={container} item={item} />
+        <Divider />
+        <AgendaSection container={container} item={item} />
+        <Divider />
+        <StreamSection container={container} item={item} />
+        <Divider />
+        <RSVPSection container={container} item={item} />
+      </Container>
     </>
   );
 }
