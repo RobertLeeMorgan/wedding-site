@@ -184,9 +184,9 @@ export default function RSVPSection({ container, item }) {
         "
       >
         <img
-          src="/emblem.svg"
+          src="/emblem.png"
           alt="ornamental divider"
-          className="h-12 opacity-40 place-self-center mix-blend-multiply saturate-120 transition-all duration-500 "
+          className="h-18 opacity-20 place-self-center mix-blend-multiply saturate-120 transition-all duration-500 "
         />
       </motion.a>
     </motion.section>

@@ -15,7 +15,7 @@ export default function HeroSection({ container, item }) {
         max-w-3xl
         mx-auto
         text-center
-        pt-20
+        pt-22
         space-y-18
       "
     >

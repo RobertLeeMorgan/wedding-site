@@ -2,13 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const images = [
-  "/photos/georgia.jpeg",
-  "/photos/morocotour.jpeg",
-  "/photos/church.jpeg",
-  "/photos/acrop1.jpeg",
-  "/photos/boat.jpeg",
-  "/photos/gallery.jpeg",
-  "/photos/pamukalleview-l.jpeg",
+  "/photos/georgia.webp",
+  "/photos/morocotour.webp",
+  "/photos/church.webp",
+  "/photos/acrop1.webp",
+  "/photos/gallery.webp",
+  "/photos/pamukalle.webp",
 ];
 
 export default function Gallery() {

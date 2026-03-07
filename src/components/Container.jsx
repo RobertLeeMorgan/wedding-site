@@ -25,11 +25,11 @@ export default function Container({ children }) {
       {/* Left gutter */}
       <div
         className="hidden md:block fixed top-0 left-0 h-screen w-1/6 bg-cover bg-top opacity-5 scale-x-[-1]"
-        style={{ backgroundImage: "url('/abstract.jpg')" }}
+        style={{ backgroundImage: "url('/abstract.webp')" }}
       />
       <div
         className="hidden md:block fixed top-0 right-0 h-screen w-1/6 bg-cover bg-top opacity-5"
-        style={{ backgroundImage: "url('/abstract.jpg')" }}
+        style={{ backgroundImage: "url('/abstract.webp')" }}
       />
 
       <div className="relative w-full md:w-2/3">
@@ -50,10 +50,10 @@ export default function Container({ children }) {
           <div
             className="
                 absolute inset-0
-                bg-[url('/paper.jpg')]
+                bg-[url('/paper.webp')]
                 bg-repeat
                 bg-[length:420px]
-                opacity-[0.25]
+                opacity-[0.8]
                 mix-blend-multiply
                 pointer-events-none
                 z-0

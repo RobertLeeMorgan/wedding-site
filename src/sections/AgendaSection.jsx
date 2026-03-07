@@ -55,7 +55,7 @@ export default function AgendaSection({container, item}) {
           ["Guest Arrival", "Guests are welcomed at the venue"],
           ["Ceremony", "Simple wedding officiated by Pastor Chris"],
           ["Photos & Family Portraits", "Portraits and candid photos after the ceremony"],
-          ["Dinner", "Soups, starters, pasta, and mains served buffet style"],
+          ["Dinner", "Traditional Greek dishes served family-style"],
           ["Toasts", "Short speeches and well wishes during dinner"],
           ["Cake Cutting", "Includes a special gender reveal"],
           ["Bouquet Toss", "A fun activity to close the evening"],
