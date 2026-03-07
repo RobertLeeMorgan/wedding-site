@@ -1,6 +1,5 @@
 "use client";
 
-import Divider from "@/components/Divider";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -71,6 +70,7 @@ export default function RSVPSection({ container, item }) {
         text-center
         space-y-12
         px-6
+        mb-10
       "
     >
       <motion.h2
@@ -186,7 +186,7 @@ export default function RSVPSection({ container, item }) {
         <img
           src="/emblem.svg"
           alt="ornamental divider"
-          className="h-12 opacity-40 place-self-center mix-blend-multiply saturate-120 transition-all duration-500 mb-4"
+          className="h-12 opacity-40 place-self-center mix-blend-multiply saturate-120 transition-all duration-500 "
         />
       </motion.a>
     </motion.section>

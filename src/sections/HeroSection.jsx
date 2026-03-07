@@ -1,4 +1,5 @@
 import Divider from "@/components/Divider";
+import Gallery from "@/components/Gallery";
 import { motion } from "framer-motion";
 
 export default function HeroSection({ container, item }) {
@@ -22,6 +23,7 @@ export default function HeroSection({ container, item }) {
         <Divider header/>
         <h1
           className="
+          relative
             text-[clamp(3rem,6vw,4rem)]
             title
             tracking-widest
@@ -44,10 +46,7 @@ export default function HeroSection({ container, item }) {
         <div className="absolute inset-0 border-2 border-[#ece2d2] pointer-events-none" />
         <div className="absolute inset-[5px] border border-[#f7f3ea] pointer-events-none" />
 
-        <img
-          src="/photos/georgia.jpeg"
-          alt="Mitzie and Rob"
-          className="w-full h-full object-cover object-[center_40%] grayscale"
+        <Gallery
         />
       </motion.div>
 
@@ -63,7 +62,7 @@ export default function HeroSection({ container, item }) {
         "
       >
         <p>March 10, 2026</p>
-        <p>Wondellea, Silang, Cavite</p>
+        <p>Elaia by Cyma, Silang</p>
       </motion.div>
     </motion.section>
   );
