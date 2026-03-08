@@ -55,7 +55,7 @@ export default function AgendaSection({ container, item }) {
         >
           <img
             src="/location.webp"
-            className="w-full h-[220px] object-cover border border-[#e6dfd4] "
+            className="w-full h-[150px] object-cover border border-[#e6dfd4] "
             alt="Map location"
           />
         </a>

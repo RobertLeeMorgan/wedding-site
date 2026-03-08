@@ -56,8 +56,9 @@ export default function HeroSection({ container, item }) {
           space-y-2
         "
       >
-        <p>March 10, 2026</p>
-        <p>Elaia by Cyma, Silang</p>
+        <p className="text-lg">March 10, 2026</p>
+        <p className="text-sm opacity-80">5:30 in the evening</p>
+        <p className="text-sm opacity-80">Elaia by Cyma · Silang, Cavite</p>
       </motion.div>
     </motion.section>
   );
