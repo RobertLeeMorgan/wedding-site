@@ -7,6 +7,7 @@ import Meta from "@/components/Meta";
 import Lenis from "lenis";
 import AgendaSection from "@/sections/AgendaSection";
 import StreamSection from "@/sections/StreamSection";
+import DetailsSection from "@/sections/DetailsSection";
 import Container from "@/components/Container";
 import Divider from "@/components/Divider";
 
@@ -59,9 +60,13 @@ export default function Home() {
     <>
       <Meta />
       <Container>
-        <HeroSection container={container} item={item} />
-        <Divider className="mt-0 pt-0"/>
+        <div>
+          <HeroSection container={container} item={item} />
+          <Divider />
+        </div>
         <AgendaSection container={container} item={item} />
+        <Divider />
+        <DetailsSection />
         <Divider />
         <StreamSection container={container} item={item} />
         <Divider />

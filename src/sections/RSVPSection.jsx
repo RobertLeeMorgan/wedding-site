@@ -123,7 +123,7 @@ export default function RSVPSection({ container, item }) {
           variants={item}
           name="attendance"
           required
-          className="px-4 py-3 text-[#3b342c] bg-[#ece6db] border border-[#c9bfaf] focus:outline-none focus:border-[#a89e8d] tracking-[0.03em] shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]"
+          className="px-4 py-3 text-[#3b342c] bg-[#ece6db]/70 border border-[#c9bfaf] focus:outline-none focus:border-[#a89e8d] tracking-[0.03em] shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]"
         >
           <option value="">Will you attend?</option>
           <option value="yes">Yes, I will attend</option>
