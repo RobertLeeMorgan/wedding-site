@@ -10,7 +10,7 @@ const images = [
   "/photos/pamukalle.webp",
 ];
 
-export default function Gallery() {
+export default function Gallery({item}) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -27,7 +27,8 @@ export default function Gallery() {
 
   return (
     <motion.div
-      className="relative z-10 w-full max-w-2xl h-[220px] mx-auto overflow-hidden"
+      className="relative z-10 w-full max-w-xl h-[220px] mx-auto overflow-hidden"
+      variants={item}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

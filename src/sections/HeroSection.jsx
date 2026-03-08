@@ -15,12 +15,16 @@ export default function HeroSection({ container, item }) {
         max-w-3xl
         mx-auto
         text-center
-        pt-22
+        flex
+        flex-col
+        justify-center
+        items-center
         space-y-18
+        h-svh
       "
     >
       <motion.div variants={item} className="relative z-10">
-        <Divider header/>
+        <Divider header />
         <h1
           className="
           relative
@@ -39,16 +43,7 @@ export default function HeroSection({ container, item }) {
         </h1>
       </motion.div>
 
-      <motion.div
-        variants={item}
-        className="relative z-10 w-full max-w-2xl h-[220px] mx-auto"
-      >
-        <div className="absolute inset-0 border-2 border-[#ece2d2] pointer-events-none" />
-        <div className="absolute inset-[5px] border border-[#f7f3ea] pointer-events-none" />
-
-        <Gallery
-        />
-      </motion.div>
+      <Gallery item={item} />
 
       <motion.div
         variants={item}

@@ -60,7 +60,7 @@ export default function Home() {
       <Meta />
       <Container>
         <HeroSection container={container} item={item} />
-        <Divider />
+        <Divider className="mt-0 pt-0"/>
         <AgendaSection container={container} item={item} />
         <Divider />
         <StreamSection container={container} item={item} />
