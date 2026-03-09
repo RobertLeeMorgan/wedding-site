@@ -10,6 +10,7 @@ import StreamSection from "@/sections/StreamSection";
 import DetailsSection from "@/sections/DetailsSection";
 import Container from "@/components/Container";
 import Divider from "@/components/Divider";
+import GiftSection from "@/sections/GiftSection";
 
 export default function Home() {
   useEffect(() => {
@@ -67,6 +68,8 @@ export default function Home() {
         <AgendaSection container={container} item={item} />
         <Divider />
         <DetailsSection container={container} item={item} />
+        <Divider />
+        <GiftSection container={container} item={item} />
         <Divider />
         <StreamSection container={container} item={item} />
         <Divider />

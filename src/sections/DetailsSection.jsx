@@ -11,7 +11,7 @@ export default function DetailsSection({ container, item }) {
         max-w-xl
         mx-auto
         text-center
-        space-y-10
+        space-y-12
         px-6
       "
       variants={container}
@@ -45,9 +45,10 @@ export default function DetailsSection({ container, item }) {
           text-[1.05rem]
           leading-relaxed
           tracking-[0.03em]
-          space-y-5
+          space-y-8
         "
       >
+        {/* Map */}
         <a
           href="https://maps.google.com/?q=Elaia+by+Cyma+Silang+Cavite"
           target="_blank"
@@ -55,21 +56,33 @@ export default function DetailsSection({ container, item }) {
         >
           <img
             src="/location.webp"
-            className="w-full h-[150px] object-cover border border-[#e6dfd4] "
+            className="w-full h-[150px] object-cover border border-[#e6dfd4] rounded-lg"
             alt="Map location"
           />
         </a>
-        <div className="space-y-6 text-[#4a433a] leading-relaxed pt-12">
+
+        <div className="space-y-4 text-[#4a433a] leading-relaxed pt-4">
+          <p className="text-sm italic opacity-80 pb-4">
+            Parking is available on site. For inquiries, contact +63 954 395
+            4764.
+          </p>
+          <p>
+            <span className="block text-sm tracking-widest uppercase opacity-70">
+              Arrival
+            </span>
+            5:30pm
+          </p>
+          <p>
+            <span className="block text-sm tracking-widest uppercase opacity-70">
+              Departure
+            </span>
+            10pm
+          </p>
           <p>
             <span className="block text-sm tracking-widest uppercase opacity-70">
               Attire
             </span>
             Smart Casual
-          </p>
-
-          <p className="max-w-md mx-auto">
-            Your presence is the greatest gift we could ask for. Should you wish
-            to bless us further, a monetary gift would be greatly appreciated.
           </p>
         </div>
       </motion.div>

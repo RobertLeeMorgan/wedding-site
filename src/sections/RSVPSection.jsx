@@ -142,7 +142,7 @@ export default function RSVPSection({ container, item }) {
           variants={item}
           type="submit"
           disabled={loading}
-          className="mt-2 py-3 border border-[#bfb4a2] text-[#3b342c] uppercase tracking-[0.18em] text-sm hover:bg-[#e6dfd4] transition-colors pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-2 py-3 border border-[#bfb4a2] text-[#3b342c] uppercase tracking-[0.18em] text-sm  hover:bg-[#e6dfd4]  transition-colors  disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? "Submitting..." : "Submit RSVP"}
         </motion.button>
