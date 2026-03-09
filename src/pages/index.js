@@ -66,7 +66,7 @@ export default function Home() {
         </div>
         <AgendaSection container={container} item={item} />
         <Divider />
-        <DetailsSection />
+        <DetailsSection container={container} item={item} />
         <Divider />
         <StreamSection container={container} item={item} />
         <Divider />

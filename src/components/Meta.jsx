@@ -20,7 +20,7 @@ export default function Meta() {
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mitzie-and-rob.vercel.app/" />
-      <meta property="og:image" content="/og-image.jpg" />
+      <meta property="og:image" content="/georgia.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ export default function Meta() {
         name="twitter:description"
         content="Join us to celebrate the wedding of Mitzie & Rob. Find the date, venue, agenda, RSVP details, and live stream link."
       />
-      <meta name="twitter:image" content="/og-image.jpg" />
+      <meta name="twitter:image" content="/georgia.webp" />
 
       <link rel="icon" href="/icon.png" />
       <link rel="canonical" href="https://mitzie-and-rob.vercel.app/" />

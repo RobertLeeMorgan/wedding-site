@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function AgendaSection({ container, item }) {
+export default function DetailsSection({ container, item }) {
   return (
     <motion.section
       id="details"

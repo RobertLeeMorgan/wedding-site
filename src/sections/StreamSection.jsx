@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import TimeBlock from "@/components/TimeBlock"
+import TimeBlock from "@/components/TimeBlock";
 
-export default function StreamSection({container, item}) {
-  const streamStart = new Date("2026-03-10T15:50:00+08:00");
-
-  const [timeLeft, setTimeLeft] = useState(null);
-  const [started, setStarted] = useState(false);
+export default function StreamSection({ container, item }) {
+  const streamStart = new Date("2026-03-10T17:30:00+08:00");
 
   function getTimeRemaining() {
     const now = new Date();
@@ -22,24 +19,33 @@ export default function StreamSection({container, item}) {
     };
   }
 
+  const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(null);
+  const [started, setStarted] = useState(false);
+
   useEffect(() => {
-    const update = () => {
+    setMounted(true);
+
+    const remaining = getTimeRemaining();
+    setTimeLeft(remaining);
+    setStarted(remaining === null);
+
+    const timer = setInterval(() => {
       const remaining = getTimeRemaining();
 
       if (!remaining) {
         setStarted(true);
         setTimeLeft(null);
-        return;
+        clearInterval(timer);
+      } else {
+        setTimeLeft(remaining);
       }
-
-      setTimeLeft(remaining);
-    };
-
-    update();
-    const timer = setInterval(update, 1000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <motion.section
@@ -90,9 +96,9 @@ export default function StreamSection({container, item}) {
 
           <div className="flex justify-center gap-10 text-[#3b342c]">
             <TimeBlock value={timeLeft.days} label="Days" item={item} />
-            <TimeBlock value={timeLeft.hours} label="Hours" item={item}/>
-            <TimeBlock value={timeLeft.minutes} label="Minutes" item={item}/>
-            <TimeBlock value={timeLeft.seconds} label="Seconds" item={item}/>
+            <TimeBlock value={timeLeft.hours} label="Hours" item={item} />
+            <TimeBlock value={timeLeft.minutes} label="Minutes" item={item} />
+            <TimeBlock value={timeLeft.seconds} label="Seconds" item={item} />
           </div>
         </motion.div>
       )}
@@ -111,8 +117,9 @@ export default function StreamSection({container, item}) {
         >
           <iframe
             className="w-full h-full"
-            src="https://www.youtube.com/embed/YOUR_STREAM_ID"
+            src="https://www.youtube.com/embed/DFKKBADTBdE?autoplay=1"
             title="Wedding Livestream"
+            allow="autoplay; encrypted-media"
             allowFullScreen
           />
         </motion.div>
